@@ -58,8 +58,3 @@ class Locators:
 
 # Проверка личного кабинета
     check_account_page = (By.XPATH, ".//p[contains(text(),'В этом разделе вы можете изменить свои персональные данные')]")
-
-# Локаторы для проверки наличия текста
-    sauce_check = (By.XPATH, "//span[text() = 'Соусы']")
-    bread_check = (By.XPATH, "//span[text() = 'Булки']")
-    filling_check = (By.XPATH, "//span[text() = 'Начинки']")

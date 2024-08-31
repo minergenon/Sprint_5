@@ -1,17 +1,16 @@
 import pytest
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
 
+BASE_URL = "https://stellarburgers.nomoreparties.site/"
+
 @pytest.fixture()
 def wd():
-    chrome_driver_path = "/home/minergenon/Загрузки/WebDriver/bin/chromedriver"
-    service = Service(chrome_driver_path)
     options = Options()
     options.add_argument("--no-sandbox")
-    driver = webdriver.Chrome(service=service, options=options)
+    driver = webdriver.Chrome(options=options)
     driver.set_window_size(1920, 1080)
-    driver.get("https://stellarburgers.nomoreparties.site/")
+    driver.get(BASE_URL)
     yield driver
     driver.quit()
