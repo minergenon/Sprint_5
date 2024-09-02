@@ -1,9 +1,8 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from data import BASE_URL
 
-
-BASE_URL = "https://stellarburgers.nomoreparties.site/"
 
 @pytest.fixture()
 def wd():
